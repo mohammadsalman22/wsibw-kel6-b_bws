@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<head>
+	<style>
+      .content{
+        font: 95% 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        max-width: 425px;
+        margin:50px auto;
+        padding: 0 16px;
+        background: #FFE4C4;
+        border: 5px solid #0d3446;
+      }
+      .content h1{
+        background: #0d3446;
+        padding: 5px 0px;
+        font-size: 140%;
+        text-align: center;
+        color: #fff;
+        margin: -16px -16px 16px -16px;
+      }
+      .content h2{
+        background: #FFE4C4;
+        padding: 0px ;
+        color: #fff;
+      }
+                body{
+            background-color: #DCDCDC;
+        }
+        .form{
+            margin: auto;
+            width: 30%;
+            height: 100%;
+            text-align: left;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Iv</title>
+</head>
+<body onload="ketwaktu()">
+<script languange ="JavaScript">
+<!--
+	var hari = new Array("Minggu","Senin","Selasa","Rabu","Kamis","Jumat","Sabtu");
+	var bulan = new Array("Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","November","Desember"); 
+    setInterval(ketwaktu,1000);
+	function ketwaktu() 
+	{
+		var t = new Date();
+		var hari_ini=hari[t.getDay()];
+		var tanggal=t.getDate();
+		var bulan_ini=bulan[t.getMonth()];
+		var tahun=t.getFullYear();
+		var jam =t.getHours();
+		var menit =t.getMinutes();
+		var detik =t.getSeconds();
+		
+		document.getElementById("hari").innerHTML = hari_ini;
+		document.getElementById("tanggal").innerHTML = tanggal;
+		document.getElementById("bulan").innerHTML = bulan_ini;
+		document.getElementById("tahun").innerHTML = tahun;
+		document.getElementById("jam").innerHTML = jam;
+		document.getElementById("menit").innerHTML = menit;
+		document.getElementById("detik").innerHTML = detik;
+
+		if (jam <= 12 ) {
+			document.getElementById("ucapan").innerHTML = "Selamat Pagi ~ ^ ^ ~";
+		}else if(jam <= 15 ){
+			document.getElementById("ucapan").innerHTML = "Selamat Siang ~ ^ ^ ~";
+		}else if(jam <= 18){
+			document.getElementById("ucapan").innerHTML = "Selamat Sore ~ ^ ^ ~";
+		}else if(jam <= 24){
+			document.getElementById("ucapan").innerHTML = "Selamat Malam ~ ^ ^ ~";
+		}
+	}
+</script>
+<div class="form">
+            <H1 align="center">Objek Array dan Waktu </H1> 
+        <H1 align="center"> Politeknik Negeri Jember </font></H1>
+        <H3 align="center"> Ivon Csianee Octaviana (E41192308) </font></H3>
+        <H3 align="center"> Program Studi Teknik Informatika Kampus Bondowoso </font></H3>
+        <hr width=75% size=3 color="black" align=center>
+        <br>
+</div>
+<div class="content">
+	<div><h1>
+        Hari : <span id="hari"></span> || Tanggal : <span id="tanggal"></span> <span id="bulan"></span> <span id="tahun"></span>
+		<p>Pukul  <span id="jam"></span> : <span id="menit"></span> : <span id="detik"></span></p></h1></div>
+		<marquee behavior="" direction=""><span id="ucapan"></span></marquee>
+		<h2></h2></div>
+</body>
+</html>

@@ -1,0 +1,217 @@
+<HTML>
+<HEAD><TITLE>Bangun Datar dan Bangun Ruang</TITLE></HEAD>
+<body bgcolor="#FFE4C4">
+<P><SCRIPT language="JavaScript">
+<!--
+function luas()
+{
+	var bil1 = parseFloat(document.fform.bilangan1.value);
+	if (isNaN (bil1))
+		bil1=0.0;
+	var bil2 = parseFloat(document.fform.bilangan2.value);
+	if (isNaN (bil2))
+		bil2=0.0;
+	var hasil = bil1 * bil2;
+	alert ("Luas Persegi = " + hasil);
+}
+function keliling()
+{
+	var bil1 = parseFloat(document.fform.bilangan1.value);
+	if (isNaN (bil1))
+		bil1=0.0;
+	var bil2 = parseFloat(document.fform.bilangan2.value);
+	if (isNaN (bil2))
+		bil2=0.0;
+	var hasil = 2 * (bil1 + bil2);
+	alert ("Keliling Persegi = " + hasil);
+}
+function luaslingkaran() 
+{
+	var bil3 = parseFloat(document.fform.bilangan3.value);
+	if (isNaN (bil3))
+		bil3=0.0;
+	var hasil = 3.14 * bil3 * bil3;
+	alert ("Luas Lingkaran = " + hasil);
+}
+function kelilinglingkaran() 
+{
+	var bil3 = parseFloat(document.fform.bilangan3.value);
+	if (isNaN (bil3))
+		bil3=0.0;
+	var hasil = 2 * 3.14 * bil3;
+	alert ("Keliling Lingkaran = " + hasil);
+}
+function volumesilinder() 
+{
+	var bil4 = parseFloat(document.fform.bilangan4.value);
+	if (isNaN (bil4))
+		bil4=0.0;
+	var bil5 = parseFloat(document.fform.bilangan5.value);
+	if (isNaN (bil5))
+		bil5=0.0;
+	var hasil = 3.14 * bil4 * bil4 * bil5;
+	alert ("Volume Silinder = " + hasil);	
+}
+function luassilinder() 
+{
+	var bil4 = parseFloat(document.fform.bilangan4.value);
+	if (isNaN (bil4))
+		bil4=0.0;
+	var hasil = 2 * 3.14 * bil4 * bil4;
+	alert ("Luas Silinder = " + hasil);
+}
+function luaskerucut()
+{
+	var bil6 = parseFloat(document.fform.bilangan6.value);
+	if (isNaN (bil6))
+		bil6=0.0;
+	var bil8 = parseFloat(document.fform.bilangan8.value);
+	if (isNaN (bil8))
+		bil8=0.0;
+	var hasil = 3.14 * bil6 * (bil6 + bil8);
+	alert ("Luas Kerucut = " + hasil);
+}
+function volumekerucut() 
+{
+	var bil6 = parseFloat(document.fform.bilangan6.value);
+	if (isNaN (bil6))
+		bil6=0.0;
+	var bil7 = parseFloat(document.fform.bilangan7.value);
+	if (isNaN (bil7))
+		bil7=0.0;
+	var hasil = 1/3 * 3.14 * bil6 * bil6 * bil7;
+	alert ("Volume Kerucut = " + hasil);
+}
+function kelilingkubus() 
+{
+	var bil9 = parseFloat(document.fform.bilangan9.value);
+	if (isNaN (bil9))
+		bil9=0.0;
+	var hasil = 12 * bil9;
+	alert ("Keliling Kubus = " + hasil);
+}
+function luaskubus() 
+{
+	var bil9 = parseFloat(document.fform.bilangan9.value);
+	if (isNaN (bil9))
+		bil9=0.0;
+	var hasil = 6 * bil9 * bil9;
+	alert ("Luas Kubus = " + hasil);
+}
+function volumekubus() 
+{
+	var bil9 = parseFloat(document.fform.bilangan9.value);
+	if (isNaN (bil9))
+		bil9=0.0;
+	var hasil = bil9 * bil9 * bil9;
+	alert ("Volume Kubus = " + hasil);
+}
+function luaspiramid() 
+{
+	var bil11 = parseFloat(document.fform.bilangan11.value);
+	if (isNaN (bil11))
+		bil11=0.0;
+	var bil12 = parseFloat(document.fform.bilangan12.value);
+	if (isNaN (bil12))
+		bil12=0.0;
+	var bil13 = parseFloat(document.fform.bilangan13.value);
+	if (isNaN (bil13))
+		bil13=0.0;
+	var hasil = bil11 * bil12 + (4 * (1/2 * bil11 * bil13));
+	alert ("Luas Piramid = " + hasil);
+}
+function volumepiramid() 
+{
+	var bil11 = parseFloat(document.fform.bilangan11.value);
+	if (isNaN (bil11))
+		bil11=0.0;
+	var bil12 = parseFloat(document.fform.bilangan12.value);
+	if (isNaN (bil12))
+		bil12=0.0;
+	var bil13 = parseFloat(document.fform.bilangan13.value);
+	if (isNaN (bil13))
+		bil13=0.0;
+	var hasil = 1/3 * bil11 * bil12 * bil13;
+	alert ("Luas Piramid = " + hasil);
+}
+//--></SCRIPT></P>
+<FORM NAME ="fform">
+<H1><font color="white">Nama : Ivon Csianee Octaviana</H1>
+<H1><font color="white">NIM : E41192308</H1>
+<H1><font color="white">TIF Kampus Bondowoso Golongan B</H1>
+	<table border="1" cellpadding="10">
+		<tr>
+			<td bgcolor="#FFFF99">
+<PRE>
+	<H1><BR>Persegi</H1>
+Panjang Persegi   :<input type="text" size="5" name="bilangan1">
+Tinggi Persegi    :<input type="text" size="5" name="bilangan2">
+<P>
+<INPUT TYPE="button" value="Luas Persegi" onclick="luas()">
+<INPUT TYPE="button" value="Keliling Persegi" onclick="keliling()">
+<INPUT TYPE="reset" value="Ulang">
+</PRE>
+			</td>
+			<td bgcolor="#FFCC99">
+<PRE>
+	<H1><BR>Lingkaran</H1>
+Jari-Jari Lingkaran  :<input type="text" size="5" name="bilangan3">
+<P>
+<INPUT TYPE="button" value="Luas Lingkaran" onclick="luaslingkaran()">
+<INPUT TYPE="button" value="Keliling Lingkaran" onclick="kelilinglingkaran()">
+<INPUT TYPE="reset" value="Ulang">
+</PRE>
+			</td>
+			<td bgcolor="#FFCC66">
+<PRE>
+	<H1><BR>Silinder</H1>
+Jari-Jari Alas     :<input type="text" size="5" name="bilangan4">
+Tinggi Silinder    :<input type="text" size="5" name="bilangan5">
+<P>
+<INPUT TYPE="button" value="Luas Silinder" onclick="luassilinder()">
+<INPUT TYPE="button" value="Volume Silinder" onclick="volumesilinder()">
+<INPUT TYPE="reset" value="Ulang">
+</PRE>
+			</td>
+		</tr>
+		<tr>
+			<td bgcolor="#CCFF99">
+<PRE>
+	<H1><BR>Kerucut</H1>
+Jari-Jari Alas     :<input type="text" size="5" name="bilangan6">
+Tinggi Kerucut     :<input type="text" size="5" name="bilangan7">
+Garis Pelukis      :<input type="text" size="5" name="bilangan8">
+<P>
+<INPUT TYPE="button" value="Luas Kerucut" onclick="luaskerucut()">
+<INPUT TYPE="button" value="Volume Kerucut" onclick="volumekerucut()">
+<INPUT TYPE="reset" value="Ulang">
+</PRE>
+			</td>
+			<td bgcolor="#CCCC66">
+<PRE>
+	<H1><BR>Kubus</H1>
+Sisi Persegi     :<input type="text" size="5" name="bilangan9">
+<P>
+<INPUT TYPE="button" value="Keliling Kubus" onclick="kelilingkubus()">
+<INPUT TYPE="button" value="Luas Kubus" onclick="luaskubus()">
+<INPUT TYPE="button" value="Volume Kubus" onclick="volumekubus()">
+<INPUT TYPE="reset" value="Ulang">
+</PRE>
+			</td>
+			<td bgcolor="#CCCC99">
+<PRE>
+	<H1><BR>Piramid</H1>
+Panjang Alas     :<input type="text" size="5" name="bilangan11">
+Lebar Alas       :<input type="text" size="5" name="bilangan12">
+Tinggi Piramid   :<input type="text" size="5" name="bilangan13">
+<P>
+<INPUT TYPE="button" value="Luas Piramid" onclick="luaspiramid()">
+<INPUT TYPE="button" value="Volume Piramid" onclick="volumepiramid()">
+<INPUT TYPE="reset" value="Ulang">
+</PRE>
+			</td>
+		</tr>
+	</table>
+</FORM>
+</BODY>
+</HTML>

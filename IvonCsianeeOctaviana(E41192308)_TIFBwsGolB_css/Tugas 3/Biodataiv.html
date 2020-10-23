@@ -1,0 +1,146 @@
+<html>
+<head>
+	<style>
+		body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        label{
+            font-size: 15px;
+            font-weight: bold;
+        }
+        input[type="text"]{
+            width: 100%;
+            height: 30px;
+            border: 1px solid darkgray;
+            border-top:none;
+            border-left: none;
+            border-right: none;
+            padding-left:10px;
+            margin-top: 3%;
+        }
+        input[type="button"]{
+            width: 100%;
+            height: 30px;
+            border: 1px solid darkgray;
+            background-color: #B0E0E6;
+            border-radius: 5px;
+        }
+        input[type="reset"]{
+            width: 100%;
+            height: 30px;
+            border: 1px solid darkgray;
+            background-color: #B0E0E6;
+            border-radius: 5px;
+        }
+        select{
+            width: 100%;
+            height: 30px;
+            border: 1px solid darkgray;
+            font-size: #eee;
+            border-left: none;
+            border-right: none;
+            border-top: none;
+            padding-left:10px;
+        }
+        textarea{
+            width: 100%;
+            margin-top: 3%;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .form{
+            margin: auto;
+            width: 30%;
+            height: 100%;
+            text-align: left;
+        }
+      </style>
+   	<meta charset="UTF-8">
+   	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+	<title>Latihan Dengan Objek Text</title></head>
+</head>
+<body bgcolor="#FFE4C4">
+<script languange ="JavaScript">
+<!--
+function tekan()
+{
+var namastr = (document.fform.nama.value);
+var alamatstr = (document.fform.alamat.value);
+document.fform.onama.value = namastr;
+document.fform.oalamat.value = alamatstr;
+		if(document.fform.status.checked == true)
+		{
+			ostatus = "Belum Menikah"
+		}
+		else
+		{
+			ostatus = "Sudah Menikah"
+		}
+		document.fform.ostatus.value = ostatus;
+		var jurusanstr = (document.fform.Jurusan.value);
+		document.fform.ojurusan.value = jurusanstr;
+		var ketstr = (document.fform.Ket.value);
+		document.fform.oket.value = ketstr;
+}
+//-->
+</script>
+<div class="form">
+	<form name ="fform">
+		<H1 align="center"> Data Mahasiswa</H1> 
+		<H1 align="center"> Politeknik Negeri Jember </font></H1>
+		<H3 align="center"> Ivon Csianee Octaviana (E41192308) </font></H3>
+		 <H3 align="center"> Program Studi Teknik Informatika Kampus Bondowoso </font></H3>
+		<hr width=75% size=3 color="black" align=center>
+		<br>
+	<H3 align="center"> Input</H3><br><br>
+<PRE>
+<label>Nama :</label>
+<input type="text" name="nama" placeholder="Masukan Nama"><br><br>
+<label>Alamat :</label>
+<input type="text" name="alamat" placeholder="Masukan Alamat"><br><br>
+<label>Status :</label>
+<input type="radio" name="input_status" id="status" value="Belum Menikah"> Belum Menikah <br><br>
+<label>Keterangan :</label>
+<textarea name="Ket" rows="3" cols="30"></textarea><br><br>
+<label>Jurusan :</label>
+<select name="Jurusan">
+<option value ="Teknik Informatika"> Teknik
+Informatika </option>
+<option value ="Manajemen Informatika"> Manajemen
+Informatika </option>
+<option value ="Teknik Komputer"> Teknik Komputer
+</option>
+<option value ="Teknik Industri"> Teknik Industri
+</option>
+<option value ="Teknik Elektro"> Teknik Elektro
+</option>
+<option value ="Teknik Sipil"> Teknik Sipil </option>
+<option value ="Teknik Arsitektur"> Teknik Arsitektur
+</option>
+<option value ="Teknik Perencanaan Wil. Kota ">
+Perencanaan Wil. Kota </option>
+</select>
+</PRE>
+<BR>
+<input type="button" value="Kirim" onclick="tekan()"><br><br>
+<input type="reset" value="Ulang"><br><br>
+	<H3 align="center"> Output</H3><br><br>
+<PRE>
+<label>Nama Anda :</label>
+<input type="text" name="onama" disabled><br><br>
+<label>Alamat Anda :</label>
+<input type="text" name="oalamat" disabled><br><br>
+<label>Status Anda :</label>
+<input type="text" name="ostatus" disabled><br><br>
+<label>Komentar Anda :</label>
+<input type="textarea" name="oket" disabled><br><br>
+<label>Jurusan Anda :</label>
+<input type="text" name="ojurusan" disabled><br><br>
+</form>
+</div>
+</body>
+</html>
