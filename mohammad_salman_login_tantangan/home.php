@@ -234,7 +234,7 @@
         </div>
         <button type="submit" class="btn btn-success" name="submit">Tambah</button>
       </form> -->
-      <form class="user" method="POST" action="contact.php" >
+      <form class="user" method="POST" action="tantangan.php" >
                 <div class="form-group">
                   <input type="text" class="form-control form-control-user" id="name" name="name" placeholder="Nama Barang" required >
                 </div>
