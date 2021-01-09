@@ -45,14 +45,14 @@ if(!isset($_SESSION["username"])){
       </li>
 
       <!-- Nav Item - Tables -->
-      <li class="nav-item">
+      <li class="nav-item active">
         <a class="nav-link" href="galery.php">
           <i class="fas fa-fw fa-chart-area"></i>
           <span>Galery</span></a>
       </li>
 
       <!-- Nav Item - Tables -->
-      <li class="nav-item active">
+      <li class="nav-item">
         <a class="nav-link" href="homepage.php">
           <i class="fa fa-home"></i>
           <span>Homepage</span></a>
@@ -91,65 +91,24 @@ if(!isset($_SESSION["username"])){
 
           <!-- Page Heading -->
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Homepage</h1>
+            <h1 class="h3 mb-0 text-gray-800">Galery</h1>
+            <a href="galery.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i>Lihat Semua Data</a>
           </div>
 
           <div class="row">
             <div class="col-lg-12">
               <div class="card shadow mb-4">
                 <div class="card-header py-3">
-                  <h6 class="m-0 font-weight-bold text-primary">Data Master Homepage</h6>
+                  <h6 class="m-0 font-weight-bold text-primary">Input Galery</h6>
                 </div>
                 <div class="card-body">
-                  <?php
-                    if (isset($_GET['pesan'])) {
-                      $pesan = $_GET['pesan'];
-                      if ($pesan == "input") {?>
-                        <div class="alert alert-success" role="alert">
-                          Data berhasil di input
-                        </div>
-                        <?php
-                      } elseif ($pesan == "update") {?>
-                        <div class="alert alert-warning" role="alert">
-                          Data berhasil di update
-                        </div>
-                        <?php
-                      } 
-                    }
-                  ?>
-                <?php
-                  include "koneksi.php";
-                  $query_mysql = mysqli_query($connect,"SELECT * FROM `tb_homepage` ORDER BY id_homepage ASC LIMIT 1 ");
-                  $nomor = 1;
-                  while ($data = mysqli_fetch_array($query_mysql)) {
-                  ?>
-                  <form action="update_homepage.php" method="POST" enctype="multipart/form-data">
+                  <form action="input_aksi_galery.php" method="POST" enctype="multipart/form-data">
                     <div class="form-group">
-                        <label for="nama_aplikasi">Nama Aplikasi</label>
-                        <input type="hidden" name="id_homepage" value="<?php echo $data['id_homepage'] ?>">
-                        <input required type="text" class="form-control" id="nama_aplikasi" value="<?php echo $data['nama_aplikasi'] ?>" name="nama_aplikasi">
-                      </div>
-                      <div class="form-group">
-                        <label for="logo_aplikasi">Logo Aplikasi</label>
-                        <input type="file" class="form-control-file" id="logo_aplikasi" name="logo_aplikasi" value="<?php echo $data['logo_aplikasi'] ?>"><br>
-                        <img width="100px" height="100px" src="../assets/images/<?php echo $data['logo_aplikasi']; ?>">
-                      </div>
-                      <div class="form-group">
-                        <label for="deskripsi_homepage">Deskripsi Homepage</label>
-                        <textarea required type="text" class="form-control" id="deskripsi_homepage" name="deskripsi_homepage"><?php echo $data['deskripsi_homepage'] ?></textarea>
-                      </div>
-                      <div class="form-group">
-                        <label for="alamat_homepage">Alamat Homepage</label>
-                        <textarea required type="text" class="form-control" id="alamat_homepage" name="alamat_homepage"><?php echo $data['alamat_homepage'] ?></textarea>
-                      </div>
-                      <div class="form-group">
-                        <label for="kontak_homepage">Kontak Homepage</label>
-                        <input required type="text" class="form-control" id="kontak_homepage" name="kontak_homepage" value="<?php echo $data['kontak_homepage'] ?>">
-                      </div>
-                     <input type="submit" value="simpan" class="btn btn-primary"></td>
+                        <label for="gambar">Gambar</label>
+                        <input required type="file" class="form-control-file" id="gambar" name="gambar">
+                    </div>
+                    <input type="submit" value="simpan" class="btn btn-primary"></td>
                   </form>
-                  <?php } ?>
-  
                 </div>
               </div>
             </div>

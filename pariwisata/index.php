@@ -98,11 +98,11 @@ Author URL: http://w3layouts.com
         <h3 class="title-big mb-5 text-center">Homestay</h3>
         <div class="row text-center">
           <?php
-            $query_mysql = mysqli_query($connect,"SELECT * FROM tb_homestay ORDER BY RAND() LIMIT 4");
+            $query_mysql = mysqli_query($connect,"SELECT * FROM tb_homestay ORDER BY RAND() LIMIT 3");
             while ($data = mysqli_fetch_array($query_mysql)) {
             $slug = preg_replace('/[^A-Za-z0-9-]+/', '-', strtolower($data['nama_homestay']));
           ?>
-            <div class="col-lg-3 col-sm-6">
+            <div class="col-lg-4 col-md-6 col-sm-12">
                 <div class="work-grids">
                     <div class="icon">
                         <img src="/pariwisata/assets/images/<?= $data['gambar_homestay']; ?>" style="height:35px;" />
