@@ -144,7 +144,7 @@ if(!isset($_SESSION["username"])){
                       </div>
                       <div class="form-group">
                         <label for="kontak_homepage">Kontak Homepage</label>
-                        <input required type="number" class="form-control" id="kontak_homepage" name="kontak_homepage" value="<?php echo $data['kontak_homepage'] ?>">
+                        <input required type="text" class="form-control" id="kontak_homepage" name="kontak_homepage" value="<?php echo $data['kontak_homepage'] ?>">
                       </div>
                      <input type="submit" value="simpan" class="btn btn-primary"></td>
                   </form>
